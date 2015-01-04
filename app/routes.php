@@ -15,6 +15,29 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+Route::get('projects/create', function()
+{
+
+    $project = new Project();
+
+    $project->name = 'Test';
+    $project->description = 'Test Description';
+    $project->moneyGoal = 100;
+    $project->moneyActual = 0;
+    $project->expireDate = time();
+    $project->user_id = 999;
+
+
+    $project->save();
+
+    return Project::all();
+
+});
+
+
+
 //
 
 // Confide routes

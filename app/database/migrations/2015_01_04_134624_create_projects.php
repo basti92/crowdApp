@@ -18,8 +18,8 @@ class CreateProjects extends Migration {
 
             $table->string('name', 255)->unique();
 
-            $table->integer('owner_id')->unsigned();
-            $table->foreign('owner_id')->references('id')->on('users');
+            $table->integer('user_id');        //->unsigned();
+         //   $table->foreign('owner_id')->references('id')->on('users');
             $table->string('description', 400);
             $table->integer('moneyGoal');
             $table->integer('moneyActual');

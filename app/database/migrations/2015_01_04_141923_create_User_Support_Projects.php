@@ -12,14 +12,16 @@ class CreateUserSupportProjects extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('user_supports_project', function(Blueprint $table)
+        Schema::create('user_project', function(Blueprint $table)
 
         {
-            $table->integer('supporter_UserId')->unsigned();
-            $table->foreign('supporter_UserId')->references('id')->on('users');
+            $table->increments('id');
 
-            $table->integer('project_Id')->unsigned();
-            $table->foreign('project_Id')->references('id')->on('projects');
+            $table->integer('user_id');     //->unsigned();
+          //  $table->foreign('supporter_UserId')->references('id')->on('users');
+
+            $table->integer('project_id');   //->unsigned();
+       //     $table->foreign('project_Id')->references('id')->on('projects');
 
             $table->integer('money_spend');
         });
