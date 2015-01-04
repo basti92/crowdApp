@@ -8,7 +8,8 @@
 		"laravel/framework": "4.2.*",
 		"barryvdh/laravel-ide-helper": "~1.11",
         "zizaco/confide": "~4.0@dev",
-        "guzzlehttp/guzzle": "~4.0"
+        "guzzlehttp/guzzle": "~4.0",
+        "way/generators": "~2.0"
 	},
 	"autoload": {
 		"classmap": [
